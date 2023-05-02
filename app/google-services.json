@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1055802909747",
+    "project_id": "extocia-5b74c",
+    "storage_bucket": "extocia-5b74c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055802909747:android:8d002acf1b116cb2c7af46",
+        "android_client_info": {
+          "package_name": "com.example.extocia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055802909747-63vb0lv3gm926t8l7ig0kevb3mknt9h4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.extocia",
+            "certificate_hash": "7da312713bfe315538d6e9c88b03c76a1445e584"
+          }
+        },
+        {
+          "client_id": "1055802909747-uo0e9a705tk6ej9k718bkap51s4h1uii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqFarQCt8vV2JqCiGg_d18Vwp7CSwj1To"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055802909747-uo0e9a705tk6ej9k718bkap51s4h1uii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
