@@ -65,7 +65,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/ic_profile" />
+                        android:src="@drawable/profile_p" />
 
                     <TextView
                         android:id="@+id/textView_update_profile_name"
@@ -111,7 +111,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/ic_email" />
+                        android:src="@drawable/email_e" />
 
                     <TextView
                         android:id="@+id/textView_update_profile_Email"
@@ -159,7 +159,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/ic_birthday" />
+                        android:src="@drawable/calendar_c" />
 
                     <TextView
                         android:id="@+id/textView_update_profile_dob"
@@ -215,7 +215,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/ic_gender" />
+                        android:src="@drawable/gender_g" />
 
                     <TextView
                         android:id="@+id/textView_update_profile_gender"
@@ -278,7 +278,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/ic_mobile" />
+                        android:src="@drawable/phone_m" />
 
                     <TextView
                         android:id="@+id/textView_update_profile_mobile"

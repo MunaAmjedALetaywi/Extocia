@@ -66,7 +66,9 @@ public class LoginTabFragment extends Fragment {
         forgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intentForgetPass = new Intent(getActivity(),ForgotPassword.class);
+                startActivity(intentForgetPass);
+                getActivity().finish();
             }
         });
         bottonLogin = view.findViewById(R.id.login_button);

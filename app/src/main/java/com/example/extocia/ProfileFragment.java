@@ -3,6 +3,8 @@ package com.example.extocia;
 import static android.app.Activity.RESULT_OK;
 
 import android.app.Activity;
+import android.content.ContentProvider;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -35,6 +38,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -43,20 +47,23 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
+
 
 import java.util.zip.Inflater;
 
 public class ProfileFragment extends Fragment {
-    private ImageView imageView ;
+    private ImageView imageViewProfile ;
     private ImageButton menuItem;
-    private FloatingActionButton button;
+
     private TextView tvname,textViewuUname,textViewEmail,textViewPhone,textViewDate,textViewGender;
     private String Email,Uname,Gender,Phone,Date;
     private ProgressBar progressBar;
     private FirebaseAuth authProfile;
     private Button btnEditProfile;
-    private StorageReference storageReference;
-    private Uri uri;
+
+
+    private FirebaseUser firebaseUser;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -78,13 +85,22 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Setting About
-                Intent intentS = new Intent(getActivity(),SignLogin.class);
+                Intent intentS = new Intent(getActivity(),Setting_menu.class);
                 startActivity(intentS);
             }
         });
 
+        //Set OnClickListener on imageView to Open UploadProfilePic
+        imageViewProfile = view.findViewById(R.id.imageView);
+        imageViewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),UploadProfilePic.class);
+                startActivity(intent);
+            }
+        });
         authProfile = FirebaseAuth.getInstance();
-        FirebaseUser firebaseUser = authProfile.getCurrentUser();
+        firebaseUser = authProfile.getCurrentUser();
 
         if(firebaseUser == null){
             Toast.makeText(getActivity(), "Something went wrong ! user's details are not available at the moment", Toast.LENGTH_SHORT).show();
@@ -102,28 +118,6 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-
-
-        //Set User's current DP ImageView (if uploaded).
-        imageView = view.findViewById(R.id.imageView);
-
-        storageReference = FirebaseStorage.getInstance().getReference("DisplayPics");
-        uri = firebaseUser.getPhotoUrl();
-
-        button = view.findViewById(R.id.floatingActionButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ImagePicker.with(ProfileFragment.this)
-                        .crop()       //Crop image(Optional), Check Customization for more option
-                        .compress(1024)    //Final image size will be less than 1 MB(Optional)
-                        .maxResultSize(1080, 1080)    //Final image resolution will be less than 1080 x 1080(Optional)
-                        .start();
-                Glide.with(ProfileFragment.this)
-                        .load(uri)
-                        .into(imageView);
-            }
-        });
 
         return view;
     }
@@ -151,6 +145,17 @@ public class ProfileFragment extends Fragment {
                     textViewGender.setText(Gender);
                     textViewPhone.setText(Phone);
 
+                    //Set user DP(After user has Uploaded)
+                    //Uri uri = firebaseUser.getPhotoUrl();
+                    //ImageView setImageURI
+                    //Picasso.get().load(uri).into(imageViewProfile);
+                    // Get the image URL from Firebase Storage
+                    String imageUrl = "https://firebasestorage.googleapis.com/v0/b/extocia-5b74c.appspot.com/o/DisplayPics%2FDOtIeDqj4TSmvAbatgk0KLHCbcQ2.jpg?alt=media&token=b26bd7d7-b014-4514-9e82-574fccf18843";
+                    // Load the image using Picasso library and display it in the ImageView
+                    Picasso.get().load(imageUrl).into(imageViewProfile);
+
+                } else {
+                    Toast.makeText(getActivity(), "Something went wrong!", Toast.LENGTH_SHORT).show();
                 }
                 progressBar.setVisibility(View.GONE);
             }
@@ -163,42 +168,5 @@ public class ProfileFragment extends Fragment {
         });
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == ImagePicker.REQUEST_CODE && resultCode == RESULT_OK && data != null) {
-            uri = data.getData();
-            StorageReference imageRef = storageReference.child("image.jpg");
-            imageView.setImageURI(uri);
-            imageRef.putFile(uri).addOnCompleteListener(task -> {
-                if (task.isSuccessful()) {
-                    Toast.makeText(getContext(), "Image uploaded successfully", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(getContext(), "Error uploading image", Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-    }
-
-   /* @Override
-    public void onCreateContextMenu(ContextMenu menu, View v,ContextMenu.ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        getActivity().getMenuInflater().inflate(R.menu.common_menu, menu);
-    }
-
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.setting:
-                Toast.makeText(getActivity(), "Setting", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.logout:
-                Toast.makeText(getActivity(), "Logout", Toast.LENGTH_SHORT).show();
-                return true;
-            default:
-                return super.onContextItemSelected(item);
-
-        }
-    }*/
 
 }

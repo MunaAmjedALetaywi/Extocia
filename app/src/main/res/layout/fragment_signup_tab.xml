@@ -9,23 +9,20 @@
     tools:context=".SignupTabFragment"
     android:id="@+id/container">
 
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="30dp"
-            android:padding="20dp">
+            android:layout_margin="20dp">
 
             <RadioGroup
                 android:id="@+id/genderRadioGroup"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:checkedButton="@id/male"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_gravity="center"
-                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
                 >
 
                 <RadioButton
@@ -33,7 +30,6 @@
                     android:background="@drawable/gender_background_selector"
                     android:button="@android:color/transparent"
                     android:drawableTop="@drawable/male"
-                    android:layout_marginLeft="16dp"
                     android:text="Male"
                     app:drawableTint="@color/gender_text_selector"
                     android:textColor="@color/gender_text_selector"
@@ -43,6 +39,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_marginStart="16dp"
+                    android:duplicateParentState="true"
                     />
 
                 <RadioButton
@@ -50,16 +47,16 @@
                     android:background="@drawable/gender_background_selector"
                     android:button="@android:color/transparent"
                     android:drawableTop="@drawable/female"
-                    android:layout_marginLeft="16dp"
                     android:text="Female"
-                    android:padding="16dp"
-                    android:textSize="15sp"
-                    android:textAlignment="center"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_marginStart="16dp"
+                    android:textAlignment="center"
+                    android:padding="16dp"
+                    android:textSize="15sp"
                     app:drawableTint="@color/gender_text_selector"
                     android:textColor="@color/gender_text_selector"
+                    android:layout_toEndOf="@id/male"
                     />
 
             </RadioGroup>
@@ -78,6 +75,7 @@
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopStart="20dp"
                 android:outlineSpotShadowColor="@color/primaryLightColor"
+                android:layout_below="@id/genderRadioGroup"
                 android:layout_marginTop="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -102,6 +100,7 @@
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopStart="20dp"
                 android:outlineSpotShadowColor="@color/primaryLightColor"
+                android:layout_below="@id/signup_phone"
                 android:layout_marginTop="5dp"
                 >
 
@@ -127,7 +126,8 @@
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopStart="20dp"
-                android:outlineSpotShadowColor="@color/primaryLightColor">
+                android:outlineSpotShadowColor="@color/primaryLightColor"
+                android:layout_below="@id/signup_username">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -150,7 +150,8 @@
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopStart="20dp"
-                android:outlineSpotShadowColor="@color/primaryLightColor">
+                android:outlineSpotShadowColor="@color/primaryLightColor"
+                android:layout_below="@id/signup_email">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/signup_date_edittext"
@@ -178,6 +179,7 @@
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopStart="20dp"
+                android:layout_below="@id/signup_date"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -201,6 +203,7 @@
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopStart="20dp"
+                android:layout_below="@id/signup_password"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -228,6 +231,7 @@
                 app:cornerRadius="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
+                android:layout_below="@id/signup_confirmpassword"
                 />
             <ProgressBar
                 android:id="@+id/progressBar"
@@ -239,6 +243,6 @@
                 android:visibility="gone" />
 
 
-        </LinearLayout>
+        </RelativeLayout>
 
 </ScrollView>

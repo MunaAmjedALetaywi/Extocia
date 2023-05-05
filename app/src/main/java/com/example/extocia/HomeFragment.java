@@ -14,17 +14,89 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-public class HomeFragment extends Fragment {
+import com.google.android.material.button.MaterialButton;
 
-    ImageView share;
+public class HomeFragment extends Fragment {
+    MaterialButton like1,like2,like3,like4,like5,share1,share2,share3,share4,share5;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        transparentStatusbarAndNavigation();
-        share = view.findViewById(R.id.share_btn);
-        share.setOnClickListener(new View.OnClickListener() {
+
+        like1 = view.findViewById(R.id.like_1);
+        like2 = view.findViewById(R.id.like_2);
+        like3 = view.findViewById(R.id.like_3);
+        like4 = view.findViewById(R.id.like_4);
+        like5 = view.findViewById(R.id.like_5);
+
+        final boolean[] isLiked = {false};
+        like1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle the button background color
+                if (isLiked[0]) {
+                    like1.setIconResource(R.drawable.favorite_border);
+                } else {
+                    like1.setIconResource(R.drawable.favorite);
+                }
+                isLiked[0] = !isLiked[0];
+            }
+        });
+        like2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle the button background color
+                if (isLiked[0]) {
+                    like2.setIconResource(R.drawable.favorite_border);
+                } else {
+                    like2.setIconResource(R.drawable.favorite);
+                }
+                isLiked[0] = !isLiked[0];
+            }
+        });
+        like3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle the button background color
+                if (isLiked[0]) {
+                    like3.setIconResource(R.drawable.favorite_border);
+                } else {
+                    like3.setIconResource(R.drawable.favorite);
+                }
+                isLiked[0] = !isLiked[0];
+            }
+        });
+        like4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle the button background color
+                if (isLiked[0]) {
+                    like4.setIconResource(R.drawable.favorite_border);
+                } else {
+                    like4.setIconResource(R.drawable.favorite);
+                }
+                isLiked[0] = !isLiked[0];
+            }
+        });
+        like5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle the button background color
+                if (isLiked[0]) {
+                    like5.setIconResource(R.drawable.favorite_border);
+                } else {
+                    like5.setIconResource(R.drawable.favorite);
+                }
+                isLiked[0] = !isLiked[0];
+            }
+        });
+        share1 = view.findViewById(R.id.share_1);
+        share2 = view.findViewById(R.id.share_2);
+        share3 = view.findViewById(R.id.share_3);
+        share4 = view.findViewById(R.id.share_4);
+        share5 = view.findViewById(R.id.share_5);
+        share1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent shaint = new Intent(Intent.ACTION_SEND);
