@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-                /*SharedPreferences sharedPreferences = getSharedPreferences(LoginTabFragment.PREFS_NAME,0);
+                SharedPreferences sharedPreferences = getSharedPreferences(LoginTabFragment.PREFS_NAME,0);
 
                 boolean hasLoggedIn = sharedPreferences.getBoolean("hasLoggedIn",false);
 
@@ -32,14 +32,15 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this,navigation_bottom.class);
                     startActivity(intent);
                     finish();
-                }else{//signLogin*/
+                }else{
+                    //signLogin
                     Intent intent = new Intent(MainActivity.this,SignLogin.class);
                     startActivity(intent);
                     finish();
-               // }
+                }
 
             }
-        },4000);
+        },3000);
     }
     private void transparentStatusbarAndNavigation(){
         if (Build.VERSION.SDK_INT>=19 && Build.VERSION.SDK_INT<21){

@@ -146,13 +146,10 @@ public class ProfileFragment extends Fragment {
                     textViewPhone.setText(Phone);
 
                     //Set user DP(After user has Uploaded)
-                    //Uri uri = firebaseUser.getPhotoUrl();
+                    Uri uri = firebaseUser.getPhotoUrl();
                     //ImageView setImageURI
-                    //Picasso.get().load(uri).into(imageViewProfile);
-                    // Get the image URL from Firebase Storage
-                    String imageUrl = "https://firebasestorage.googleapis.com/v0/b/extocia-5b74c.appspot.com/o/DisplayPics%2FDOtIeDqj4TSmvAbatgk0KLHCbcQ2.jpg?alt=media&token=b26bd7d7-b014-4514-9e82-574fccf18843";
-                    // Load the image using Picasso library and display it in the ImageView
-                    Picasso.get().load(imageUrl).into(imageViewProfile);
+                    Picasso.get().load(uri).into(imageViewProfile);
+
 
                 } else {
                     Toast.makeText(getActivity(), "Something went wrong!", Toast.LENGTH_SHORT).show();

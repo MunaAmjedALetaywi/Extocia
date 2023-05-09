@@ -23,7 +23,7 @@ android:background="@drawable/backgroundsplash"
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="5dp"
         android:clickable="true"
         android:elevation="15dp"
         app:cardCornerRadius="15dp">
@@ -87,7 +87,7 @@ android:background="@drawable/backgroundsplash"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <com.google.android.material.button.MaterialButton
@@ -123,7 +123,7 @@ android:background="@drawable/backgroundsplash"
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginTop="3dp"
         android:clickable="true"
         android:elevation="10dp"
@@ -212,8 +212,8 @@ android:background="@drawable/backgroundsplash"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
-                android:layout_weight="3"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="2"
                 android:orientation="horizontal">
                 <!--<a href="https://www.flaticon.com/free-icons/comment"
       title="comment icons">Comment icons created by Freepik - Flaticon</a>-->
@@ -250,7 +250,7 @@ android:background="@drawable/backgroundsplash"
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginTop="3dp"
         android:clickable="true"
         android:elevation="5dp"
@@ -352,8 +352,8 @@ android:background="@drawable/backgroundsplash"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
-                android:layout_weight="3"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="2"
                 android:orientation="horizontal">
                 <!--<a href="https://www.flaticon.com/free-icons/comment"
       title="comment icons">Comment icons created by Freepik - Flaticon</a>-->
@@ -390,7 +390,7 @@ android:background="@drawable/backgroundsplash"
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginTop="3dp"
         android:clickable="true"
         android:elevation="15dp"
@@ -489,8 +489,8 @@ android:background="@drawable/backgroundsplash"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
-                android:layout_weight="3"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="2"
                 android:orientation="horizontal">
                 <!--<a href="https://www.flaticon.com/free-icons/comment"
       title="comment icons">Comment icons created by Freepik - Flaticon</a>-->
@@ -566,7 +566,7 @@ android:background="@drawable/backgroundsplash"
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginTop="3dp"
         android:clickable="true"
         android:elevation="15dp"
@@ -591,21 +591,180 @@ android:background="@drawable/backgroundsplash"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:text="this is the supporting text.this is the supporting text.this is the supporting text.this is the supporting text."
+                android:text="Causes of rash in children"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="It is difficult to differentiate between the various causes by appearance only in many cases of skin rashes, due to the similarity of many causes of rashes in shape. In differentiating between the various causes of skin rashes in children, doctors also rely on the following:"
                 android:textSize="15dp"
-                android:textStyle="bold" />
-            <!--Photo by Pixabay: https://www.pexels.com/photo/close-up-of-human-hand-256514/-->
+                android:textColor="@color/black" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*The nature of rash behavior."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Associated symptoms, which vary between the location of the rash and its distribution in the body"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*The speed of onset and the duration of the rash."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*The appearance of other symptoms, such as itching or a high temperature."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*The speed of onset and the duration of the rash."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Symptoms associated with rashes in children"
+                android:textSize="15dp"
+                 android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Doctors can distinguish between the different causes of skin rashes, by the distinctive symptoms associated with some of the causes of this symptom."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*scarlet fever."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Erythema Infectiosum."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Rosacea in children."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Causes that are usually accompanied by itching:"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Atopic Dermatitis."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Pityriasis rosea."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Erythema infection."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*molluscum contagiosum infection."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Ringworm infection."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="3"
                 android:orientation="horizontal">
                 <!--<a href="https://www.flaticon.com/free-icons/comment"
-      title="comment icons">Comment icons created by Freepik - Flaticon</a>-->
+                 title="comment icons">Comment icons created by Freepik - Flaticon</a>-->
                 <com.google.android.material.button.MaterialButton
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
@@ -632,6 +791,292 @@ android:background="@drawable/backgroundsplash"
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_six"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="3dp"
+        android:clickable="true"
+        android:elevation="15dp"
+        app:cardCornerRadius="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Body itching when sleeping"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="The causes of body itching when sleeping include many factors and influences, the following are the most important:"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Daily systems"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Natural changes in the circadian rhythm, or circadian rhythm, may be the most common cause of itching during sleep, as they affect functions of the skin, such as temperature regulation, fluid balance, skin moisture, and hormonal fluctuations. These changes include: follows:"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Body temperature: The hypothalamus, or hypothalamus, maintains the daily rhythms. The hypothalamus is an essential gland in the brain responsible for regulating body temperature. The body temperature reaches its highest level in the late evening, while it reaches its lowest level in the early morning. The hypothalamus cools the body during NREM sleep, or directly when sleep begins. More blood flows to the skin, and the body releases heat to the surrounding environment during this stage. Which increases the temperature of the skin and causes the sensation of itching at night."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Skin dryness: One of the causes of itching during sleep is increased skin loss of moisture throughout the night, a process called transepidermal water loss and dehydration, so the skin's barrier function decreases during the night, which may allow the entry of itch-inducing substances at night. Damage to the outer layer of skin (stratum corneum) due to xerosis or atopic dermatitis increases pathological itching, especially at night."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Hormone fluctuations: Cortisol secretion follows a circadian rhythm, with its concentrations lowest during the evening and around midnight; So its anti-inflammatory effects are minimal. Which may cause itching of the body before bedtime and throughout the night."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Cytokines: The body's secretion of some substances varies according to the time of day to night, as the secretion of cytokines increases during the night, resulting in stimulation of inflammation and itching when sleeping."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Getting old"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Aging is one of the causes of body itching when sleeping, as some natural factors of aging contribute to the feeling of itching at night, such as dry skin and a decrease in the body's immunity, and neurodegeneration increases skin irritation and itching."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Insect bites"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Insect bites are among the causes of body itching at bedtime, the most disturbing and insomnia, and examples of these insects are:"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Bed bugs and fleas: They are nocturnal insects that feed on blood, and insect bites should be excluded in all cases of itching, as it is easy to see noticeable bite marks on the skin that improve within a few hours or days. Insect bites may cause a mild allergic reaction and the area of redness and inflammation of the skin becomes larger and may improve within a week."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Scabies: It is a skin disease that causes itching due to the mite insect. Scabies is one of the causes of body itching when sleeping and may affect all ages. Itching is usually present all the time but is often more noticeable when sleeping due to its nocturnal nature."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Polycythemia vera"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Itching is a common symptom of polycythemia, a condition in which the bone marrow produces too many red blood cells, white blood cells, and platelets. Many patients with this condition experience itching, especially after showering or getting the skin wet. Many people have to shower in the evening before bed, which increases the chances of itching at night."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Inflammatory skin diseases"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="The causes of body itching when sleeping may be attributed to some common skin disorders, including:"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Atopic dermatitis or eczema: Atopic dermatitis is a chronic skin condition in which sufferers have difficulty falling asleep and waking up early due to body itching at bedtime that leads to fatigue and insomnia."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Psoriasis: A chronic, inflammatory, autoimmune skin disorder characterized by scaly patches of skin, covering the body and scalp. A thermoregulatory imbalance that makes the skin warm during the first few hours of sleep also contributes to the condition. Which causes increased body itching when sleeping and discomfort."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="*Lichen planus is another autoimmune disease that often appears inside the mouth as well as many other parts of the body, nails, and scalp. It appears as a purple, flat-topped, itchy rash."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="It should be noted that excessive itching and scratching, regardless of the cause, may lead to further irritation or skin patches called lichen simplex chronica."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="The most common causes of bedtime itch in children are atopic dermatitis and psoriasis with lichen simplex chronicus, as well as prurigo nodosum."
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/itching" />
+            <!--Photo by Pixabay: https://www.pexels.com/photo/close-up-of-human-hand-256514/-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+                <!--<a href="https://www.flaticon.com/free-icons/comment"
+      title="comment icons">Comment icons created by Freepik - Flaticon</a>-->
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Like"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    app:icon="@drawable/favorite_border"
+                    android:id="@+id/like_6"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Share"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    app:icon="@drawable/outline_share_24"
+                    android:id="@+id/share_6"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 
 </LinearLayout>
 

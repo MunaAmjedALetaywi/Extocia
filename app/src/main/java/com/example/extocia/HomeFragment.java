@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import com.google.android.material.button.MaterialButton;
 
 public class HomeFragment extends Fragment {
-    MaterialButton like1,like2,like3,like4,like5,share1,share2,share3,share4,share5;
+    MaterialButton like1,like2,like3,like4,like5,like6,share1,share2,share3,share4,share5;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class HomeFragment extends Fragment {
         like3 = view.findViewById(R.id.like_3);
         like4 = view.findViewById(R.id.like_4);
         like5 = view.findViewById(R.id.like_5);
+        like6 = view.findViewById(R.id.like_6);
 
         final boolean[] isLiked = {false};
         like1.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +88,18 @@ public class HomeFragment extends Fragment {
                     like5.setIconResource(R.drawable.favorite_border);
                 } else {
                     like5.setIconResource(R.drawable.favorite);
+                }
+                isLiked[0] = !isLiked[0];
+            }
+        });
+        like6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle the button background color
+                if (isLiked[0]) {
+                    like6.setIconResource(R.drawable.favorite_border);
+                } else {
+                    like6.setIconResource(R.drawable.favorite);
                 }
                 isLiked[0] = !isLiked[0];
             }

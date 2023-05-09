@@ -101,6 +101,7 @@ public class UploadProfilePic extends AppCompatActivity {
             fileReference.putFile(uriImage).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
                     fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
@@ -110,14 +111,14 @@ public class UploadProfilePic extends AppCompatActivity {
                             UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                                     .setPhotoUri(downloadUri).build();
                             firebaseUser.updateProfile(profileUpdates);
-
+                            Log.d("URLIMAGE", "onSuccess: "+uri.toString());
 
                         }
                     });
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(UploadProfilePic.this, "Upload Successful!", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(UploadProfilePic.this,ProfileFragment.class);
+                    Intent intent = new Intent(UploadProfilePic.this,navigation_bottom.class);
                     startActivity(intent);
                     finish();
                 }

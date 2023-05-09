@@ -5,25 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutApplication"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/backgroundsplash">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logofinal"
+        android:layout_marginTop="50dp"/>
 
     <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Extocia"
+        android:text="Extocia is an Android app that uses machine learning to identify skin conditions and suggest treatments. By taking a photo of the affected area, the app will analyze the photo and return the name of the disease along with recommended treatments.This app can be useful for people who want to self-diagnose minor ailments, or for those who live in areas where medical professionals are not easily accessible."
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="20dp"/>
-    <TextView
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="This Application"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
         />
 
 </LinearLayout>

@@ -8,9 +8,10 @@
     <ImageView
         android:id="@+id/logo"
         android:src="@mipmap/ic_launcher_round"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         />
 
     <TextView
@@ -18,7 +19,9 @@
         android:text="text"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:paddingTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="60dp"
+        android:textColor="@color/black"/>
 
 </LinearLayout>

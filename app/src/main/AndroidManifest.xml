@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Extocia"
         tools:targetApi="31">
         <activity
+            android:name=".ChangePassword"
+            android:exported="false" />
+        <activity
             android:name=".UploadProfilePic"
             android:exported="false" />
         <activity

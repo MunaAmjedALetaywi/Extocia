@@ -20,12 +20,16 @@
         />
 
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_gravity="center"
         android:background="@drawable/person"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:strokeWidth="3dp"
+        android:padding="3dp"
+        app:strokeColor="@color/secondaryLightColor"
         android:scaleType="centerCrop"/>
 
 

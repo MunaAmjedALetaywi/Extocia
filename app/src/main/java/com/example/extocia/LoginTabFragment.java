@@ -160,16 +160,15 @@ public class LoginTabFragment extends Fragment {
         alertDialog.show();
     }
     //check if User is already logged in .In Such case, straightway take the User to the User's profile
-    /*@Override
+    @Override
     public void onStart() {
         super.onStart();
         if(authprofile.getCurrentUser() != null){
-            Toast.makeText(getActivity(), "Already Logged In", Toast.LENGTH_SHORT).show();
             //Start the navigation
             startActivity(new Intent(getActivity(),navigation_bottom.class));
             getActivity().finish();
         }else {
             Toast.makeText(getActivity(), "You can login now", Toast.LENGTH_SHORT).show();
         }
-    }*/
+    }
 }

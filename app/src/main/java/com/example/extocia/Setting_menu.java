@@ -25,8 +25,8 @@ import java.util.List;
 public class Setting_menu extends AppCompatActivity {
 
     ListView listView;
-    String titles[]={"Favorite","Upload Picture","Language","About","Logout"};
-    int imgs[] ={R.drawable.favoritesetting,R.drawable.baseline_photo_camera_24,R.drawable.baseline_language_24,R.drawable.baseline_info_24,R.drawable.baseline_logout_24};
+    String titles[]={"Favorite","Change Password","Language","About","Logout"};
+    int imgs[] ={R.drawable.favoritesetting,R.drawable.baseline_password_24,R.drawable.baseline_language_24,R.drawable.baseline_info_24,R.drawable.baseline_logout_24};
 
     private FirebaseAuth authProfile;
     @Override
@@ -49,9 +49,7 @@ public class Setting_menu extends AppCompatActivity {
                     Toast.makeText(Setting_menu.this, "Item 1 Clicked", Toast.LENGTH_SHORT).show();
                 }
                 if (position == 1){
-                    Toast.makeText(Setting_menu.this, "Item 2 Clicked", Toast.LENGTH_SHORT).show();
-
-                    Intent intent = new Intent(Setting_menu.this,SignLogin.class);
+                    Intent intent = new Intent(Setting_menu.this,ChangePassword.class);
                     startActivity(intent);
                     finish();
                 }
