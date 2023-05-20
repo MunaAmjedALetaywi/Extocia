@@ -70,7 +70,7 @@ public class navigation_bottom extends AppCompatActivity {
                     scanTxt.setVisibility(View.GONE);
                     profileTxt.setVisibility(View.GONE);
 
-                    scanImage.setImageResource(R.drawable.outline_scanner);
+                    scanImage.setImageResource(R.drawable.outline_camera);
                     profileImage.setImageResource(R.drawable.person_outline);
 
                     scanLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -109,7 +109,7 @@ public class navigation_bottom extends AppCompatActivity {
                     profileLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
                     scanTxt.setVisibility(View.VISIBLE);
-                    scanImage.setImageResource(R.drawable.outline_selected_scanner);
+                    scanImage.setImageResource(R.drawable.outline_selected_camera);
                     scanLayout.setBackgroundResource(R.drawable.round_back_home);
 
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
@@ -119,11 +119,11 @@ public class navigation_bottom extends AppCompatActivity {
 
                     selectedTab = 2;
 
-                    ImagePicker.with(navigation_bottom.this)
+                    /*ImagePicker.with(navigation_bottom.this)
                             .crop()
                             .compress(1024)
                             .maxResultSize(1080, 1080)
-                            .start();
+                            .start();*/
                 }
 
             }
@@ -140,7 +140,7 @@ public class navigation_bottom extends AppCompatActivity {
                     scanTxt.setVisibility(View.GONE);
                     homeTxt.setVisibility(View.GONE);
 
-                    scanImage.setImageResource(R.drawable.outline_scanner);
+                    scanImage.setImageResource(R.drawable.outline_camera);
                     homeImage.setImageResource(R.drawable.outline_home);
 
                     scanLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
                 boolean hasLoggedIn = sharedPreferences.getBoolean("hasLoggedIn",false);
 
-                if(hasLoggedIn){
+                if (hasLoggedIn){
                     Intent intent = new Intent(MainActivity.this,navigation_bottom.class);
                     startActivity(intent);
                     finish();

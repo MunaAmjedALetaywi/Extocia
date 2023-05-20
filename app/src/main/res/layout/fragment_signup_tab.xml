@@ -43,7 +43,6 @@
                     />
 
                 <RadioButton
-                    android:id="@+id/female"
                     android:background="@drawable/gender_background_selector"
                     android:button="@android:color/transparent"
                     android:drawableTop="@drawable/female"

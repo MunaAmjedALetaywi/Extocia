@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/logofinal"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="40dp"/>
 
     <TextView
         android:layout_marginTop="15dp"
@@ -21,11 +21,85 @@
         android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Extocia is an Android app that uses machine learning to identify skin conditions and suggest treatments. By taking a photo of the affected area, the app will analyze the photo and return the name of the disease along with recommended treatments.This app can be useful for people who want to self-diagnose minor ailments, or for those who live in areas where medical professionals are not easily accessible."
+        android:text="About App:"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:gravity="center"
         />
 
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Extocia is an Android app that uses machine learning to identify skin conditions and suggest treatments. By taking a photo of the affected area, the app will analyze the photo and return the name of the disease along with recommended treatments.This app can be useful for people who want to self-diagnose minor ailments, or for those who live in areas where medical professionals are not easily accessible."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Presented By:"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Muna AlEtaywi"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mohammad Abdullah"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Omar Dalahmeh"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Osama Boshnaq"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
 </LinearLayout>
