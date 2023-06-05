@@ -1,5 +1,6 @@
 package com.example.extocia;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -12,12 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 
 import com.google.android.material.button.MaterialButton;
 
 public class HomeFragment extends Fragment {
-    MaterialButton like1,like2,like3,like4,like5,like6,share1,share2,share3,share4,share5;
+    MaterialButton like1,like2,like3,like4,like5,like6,share1,share2,share3,share4,share5,share6;
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -109,7 +110,69 @@ public class HomeFragment extends Fragment {
         share3 = view.findViewById(R.id.share_3);
         share4 = view.findViewById(R.id.share_4);
         share5 = view.findViewById(R.id.share_5);
+        share6 = view.findViewById(R.id.share_6);
+
         share1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent shaint = new Intent(Intent.ACTION_SEND);
+                shaint.setType("text/plain");
+                String shareBody = "Your body hear";
+                String shareSub = "Your Subject here";
+                shaint.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                shaint.putExtra(Intent.EXTRA_TEXT,shareBody);
+                startActivity(Intent.createChooser(shaint,"Share using"));
+            }
+        });
+        share2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent shaint = new Intent(Intent.ACTION_SEND);
+                shaint.setType("text/plain");
+                String shareBody = "Your body hear";
+                String shareSub = "Your Subject here";
+                shaint.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                shaint.putExtra(Intent.EXTRA_TEXT,shareBody);
+                startActivity(Intent.createChooser(shaint,"Share using"));
+            }
+        });
+        share3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent shaint = new Intent(Intent.ACTION_SEND);
+                shaint.setType("text/plain");
+                String shareBody = "Your body hear";
+                String shareSub = "Your Subject here";
+                shaint.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                shaint.putExtra(Intent.EXTRA_TEXT,shareBody);
+                startActivity(Intent.createChooser(shaint,"Share using"));
+            }
+        });
+        share4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent shaint = new Intent(Intent.ACTION_SEND);
+                shaint.setType("text/plain");
+                String shareBody = "Your body hear";
+                String shareSub = "Your Subject here";
+                shaint.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                shaint.putExtra(Intent.EXTRA_TEXT,shareBody);
+                startActivity(Intent.createChooser(shaint,"Share using"));
+            }
+        });
+        share5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent shaint = new Intent(Intent.ACTION_SEND);
+                shaint.setType("text/plain");
+                String shareBody = "Your body hear";
+                String shareSub = "Your Subject here";
+                shaint.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                shaint.putExtra(Intent.EXTRA_TEXT,shareBody);
+                startActivity(Intent.createChooser(shaint,"Share using"));
+            }
+        });
+        share6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent shaint = new Intent(Intent.ACTION_SEND);

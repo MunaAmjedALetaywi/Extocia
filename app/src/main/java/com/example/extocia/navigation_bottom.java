@@ -1,12 +1,15 @@
 package com.example.extocia;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -22,6 +25,8 @@ import android.widget.TextView;
 import com.example.extocia.databinding.ActivityMainBinding;
 import com.example.extocia.databinding.ActivityNavigationBottomBinding;
 import com.github.dhaval2404.imagepicker.ImagePicker;
+
+import java.io.File;
 
 public class navigation_bottom extends AppCompatActivity {
 
@@ -119,11 +124,13 @@ public class navigation_bottom extends AppCompatActivity {
 
                     selectedTab = 2;
 
+
                     /*ImagePicker.with(navigation_bottom.this)
                             .crop()
                             .compress(1024)
                             .maxResultSize(1080, 1080)
                             .start();*/
+
                 }
 
             }
@@ -162,4 +169,20 @@ public class navigation_bottom extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == Activity.RESULT_OK && data != null) {
+            // The image was successfully picked, get its URI
+            Uri uri = data.getData();
+
+            /*ScanFragment fragment = (ScanFragment) getSupportFragmentManager().findFragmentById(R.id.ScanFragmentS);
+            if (fragment != null) {
+                fragment.setImageUri(uri);}*/
+
+
+        }
+
+    }
 }

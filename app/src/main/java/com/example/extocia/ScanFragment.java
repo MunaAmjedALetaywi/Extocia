@@ -27,7 +27,7 @@ import org.json.*;
 import java.io.*;
 public class ScanFragment extends Fragment {
     private ImageView imageView;
-    private TextView textView;
+    private TextView textView,tretment;
     private File imageFile;
 
     @Override
@@ -38,6 +38,7 @@ public class ScanFragment extends Fragment {
 
         imageView = view.findViewById(R.id.imageView);
         textView = view.findViewById(R.id.text_view);
+        tretment = view.findViewById(R.id.treatment);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +50,7 @@ public class ScanFragment extends Fragment {
                         .start();
             }
         });
+
 
         return view;
     }
@@ -64,6 +66,7 @@ public class ScanFragment extends Fragment {
             // Convert the URI to a file
             imageFile = new File(uri.getPath());
             imageView.setImageURI(uri);
+
             // Upload the image
             uploadImage(imageFile);
         }
@@ -79,16 +82,16 @@ public class ScanFragment extends Fragment {
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://127.0.0.1:8000/ExtoxiaPredict")
+                //.url("http://127.0.0.1:8000/ExtoxiaPredict")
+                .url("http://localhost:8000/ExtoxiaPredict")
+                .header("Connection", "close")
                 .post(requestBody)
                 .build();
-
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
             }
-
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if (!response.isSuccessful()) {
@@ -102,7 +105,25 @@ public class ScanFragment extends Fragment {
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                textView.setText(message);
+                                //textView.setText(message);
+                                String[] classes = {"Sun burns", "Shingles", "Eczema","Acne","Melanoma"};
+                                int classIndex = Integer.parseInt(message);
+                                textView.setText(classes[classIndex - 1]);
+                                if ("Sun burns" == classes[classIndex - 1]){
+                                    tretment.setText("The Treatment\n\nTake a pain reliever.\nCool the skin.\nApply a moisturizer, skin cream, or gel.\nDrink more water throughout the day.\nLeave the blisters alone.\nTreat flaky skin gently.\nUse any anti-itch medication.\nApply a soothing medicated cream.\nYou should see a doctor");
+
+                                } else if ("Shingles" == classes[classIndex - 1]) {
+                                    tretment.setText("The Treatment\n\nTopical capsaicin patch.\nAntispasmodics, such as gabapentin.\nTricyclic antidepressants, such as amitriptyline\nNumbing agents, such as lidocaine, which comes as a cream, gel, spray, or skin patch\nAn injection containing corticosteroids and local anesthetics.\nYou should see a doctor");
+
+                                } else if ("Eczema" == classes[classIndex - 1]) {
+                                    tretment.setText("The Treatment\n\n1. Avoidance of irritants | Allergens.\n2. Frequent use of emollients.\n3. Topical steroids.\nYou should see a doctor");
+
+                                } else if ("Acne" == classes[classIndex - 1]) {
+                                    tretment.setText("The Treatment\n\n1. Over-the-counter topical creams containing salicylic acid or benzoyl peroxide.\n2. Topical or oral antibiotics, which are used in severe cases of acne.\n3. Corticosteroid injections in case of inflammatory acne.\n4. Products derived from vitamin A, such as tretinoin, isotretinoin, and adapalene, which are available as oral pills and topical creams and ointments.\nYou should see a doctor");
+
+                                } else if ("Melanoma" == classes[classIndex - 1]) {
+                                    tretment.setText("The Treatment\n\nTreatment according to the stage.\n1. Surgery.\n2. Doug therapy.\n3. Radiotherapy.\nYou should see a doctor");
+                                }
                             }
                         });
                     } catch (JSONException e) {
@@ -112,4 +133,10 @@ public class ScanFragment extends Fragment {
             }
         });
     }
+
+    /*public void setImageUri(Uri uri) {
+        ImageView imageView = getView().findViewById(R.id.imageView);
+        imageView.setImageURI(uri);
+        uploadImage(imageFile);
+    }*/
 }

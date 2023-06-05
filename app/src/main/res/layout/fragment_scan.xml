@@ -6,27 +6,51 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ScanFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/ScanFragmentS"
+    android:background="@drawable/backgroundsplash">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
         android:layout_width="280dp"
         android:layout_height="280dp"
         android:layout_gravity="center"
-        android:background="@drawable/person"
-        app:strokeWidth="3dp"
+        android:background="@drawable/scanex"
         android:padding="3dp"
-        app:strokeColor="@color/secondaryLightColor"
         android:scaleType="centerCrop"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/text_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+
+
+    <TextView
+        android:id="@+id/treatment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
         />
 
 </LinearLayout>

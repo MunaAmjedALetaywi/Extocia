@@ -516,46 +516,6 @@ android:background="@drawable/backgroundsplash"
                     app:icon="@drawable/outline_share_24"
                     android:id="@+id/share_4"/>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:text="Manal"
-                        android:textStyle="bold"
-                        android:padding="5dp"
-                        android:background="#FFF3F0F0"
-                        android:layout_marginLeft="5dp"
-                        android:textColor="@color/black"/>
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:text="its very beautiful"
-                        android:layout_marginLeft="5dp"
-                        android:padding="5dp"
-                        android:background="#FFF3F0F0"
-                        />
-
-
-                </LinearLayout>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Like"
-                    android:backgroundTint="#FFF3F0F0"/>
-
-            </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
     <com.google.android.material.card.MaterialCardView
@@ -1065,7 +1025,8 @@ android:background="@drawable/backgroundsplash"
                     android:text="Share"
                     android:textAllCaps="false"
                     android:textSize="15dp"
-                    app:icon="@drawable/outline_share_24" />
+                    app:icon="@drawable/outline_share_24"
+                    android:id="@+id/share_6"/>
             </LinearLayout>
 
 
